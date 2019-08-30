@@ -22,6 +22,7 @@
 	*,
 	*:before,
 	*:after {
+		@apply text-black;
 		box-sizing: border-box;
 		margin: 0;
 	}
