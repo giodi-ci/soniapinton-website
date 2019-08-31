@@ -1,13 +1,12 @@
 <template>
 	<div class="container">
-		<div class="splash-screen bg-grey">
+		<div 
+			class="splash-screen bg-grey"
+			ref="splash"
+		>
 			<div class="profile" />
 			<div class="signature flex flex-col items-center">
-				<div class="initials" />
-				<div class="maxim font-bold flex justify-between">
-					<span>{{ maxim.left }}</span>
-					<span>{{ maxim.right }}</span>
-				</div>
+				<div class="svg-initials" />
 				<div class="feather" />
 			</div>
 		</div>
@@ -18,40 +17,51 @@
 	export default {
 		data() {
 			return {
-				maxim: {
-					left: 'AUTRICE',
-					right: 'PAROLE IN MUSICA'
-				}
+				
 			}
-		}
+		},
 	}
 </script>
 
 <style lang="scss">
+	@import './../assets/scss/variables.scss';
+
 	.splash-screen {
 		width: 100vw;
 		height: 100vh;
 
-		.profile {
+		@media only screen and (max-width: $small) {
 			width: 100%;
-			height: 100vh;
+		    height: 220px;
+		}
+
+		.profile {
 			position: absolute;
+			width: 100%;
+			height: 100%;
 			pointer-events: none;
 			background: {
 				image: url('../assets/images/sonia-pinton-profile.png');
-				size: auto;
+				size: contain;
 				repeat: no-repeat;
 				position: left;
 			}
+			@media only screen and (max-width: $small) {
+				height: 220px;
+			}
 		}
 
+
+		
 		.signature {
 			position: relative;
 			width: 50%;
-			margin-left: 30%;
-			padding-top: 10%;
+			height: 100vh;
+			margin: 0 auto;
 
-			.initials {
+			.svg-initials {
+				position: relative;
+				top: 10%;
 				width: 450px;
 				height: 450px;
 				background: {
@@ -60,26 +70,104 @@
 					repeat: no-repeat;
 					position: center;
 				}
+
+				&::before, 
+				&::after {
+					font-weight: bold;
+				}
+
+				&::before {
+					content: 'AUTRICE';
+					position: absolute;
+					bottom: 0;
+					left: 25%;
+				}
+				&::after {
+					content: 'PAROLE IN MUSICA';
+					position: absolute;
+					bottom: 0;
+					right: -22%;
+				}
+
 			}
 
-			.maxim {
-				width: 450px;
-				position: absolute;
-				bottom: 25%;
-				left: 34%;
+			@media only screen and (max-width: $large) {
+				height: 300px;
+				top: 10%;
+
+				.svg-initials {
+					&::before, 
+					&::after {
+						font-size: 0.8rem;
+					}
+
+					&::before {
+						left: 30%;
+					}
+					&::after {
+						right: -8%;
+					}
+				}
 			}
+			
+			@media only screen and (max-width: $medium) {
+				height: 200px;
+			}
+			
+			@media only screen and (max-width: $small) {
+				height: 110px;
+				top: 0;
+
+				.svg-initials {
+					width: 180px;
+
+					&::before,
+					&::after {
+						font-size: 0.6rem;
+					}
+
+					&::before {
+						left: 12%;
+    					bottom: -5%;
+					}
+
+					&::after {
+						right: -24%;
+    					top: 105%;
+					}
+				}
+			}
+			
 
 			.feather {
-				width: 200px;
-				height: 200px;
+				width: 280px;
+				height: 90px;
+				position: absolute;
+				bottom: 10%;
 				background: {
 					image: url('../assets/svg/feather.svg');
 					size: auto;
 					repeat: no-repeat;
 					position: center;
 				}
-				transform: rotate(45deg);
+
+				@media only screen and (max-width: $large) {
+					height: 240px;
+					bottom: -100%;
+				}
+
+				@media only screen and (max-width: $medium) {
+					height: 60px;
+					bottom: -60%;
+				}
+				
+				@media only screen and (max-width: $small) {
+					height: 30px;
+    				bottom: -80%;
+				}
 			}
 		}
 	}
+
+	
 </style>
