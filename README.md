@@ -1,6 +1,6 @@
 # soniapinton-website
 
-> Website of author Sonia Pinton 
+> Website of author Sonia Pinton.
 
 ## Build Setup
 
