@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "nuxt": "^2.0.0",
+    "nuxt-i18n": "^6.3.0",
     "rfs": "^9.0.2"
   },
   "devDependencies": {

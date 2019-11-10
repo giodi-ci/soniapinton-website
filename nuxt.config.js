@@ -38,7 +38,22 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    'nuxt-i18n',
   ],
+  i18n: {
+    locales: ['it', 'en'],
+    vueI18n: {
+      fallbackLocale: 'it',
+      messages: {
+        it: {
+          splash: {
+            left: 'AUTRICE DI',
+            right: 'PAROLE IN MUSICA'
+          }
+        }
+      }
+    },
+  },
   /*
   ** Build configuration
   */
