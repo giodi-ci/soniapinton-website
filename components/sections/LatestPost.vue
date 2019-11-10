@@ -1,12 +1,26 @@
 <template>
 	<div class="latest-post">
-		Latest post
+		<title-simple :text="text.title" />
+		<post />
 	</div>
 </template>
 
 <script>
-export default {
+import TitleSimple from './../ui/TitleSimple.vue';
+import Post from './../ui/Post.vue';
 
+export default {
+	components: {
+		TitleSimple,
+		Post,
+	},
+	data() {
+		return {
+			text: {
+				title: 'Latest from',
+			},
+		};
+	},
 }
 </script>
 
