@@ -1,16 +1,14 @@
 <template>
-	<div class="splash">
-		<div 
-			class="splash-screen bg-grey"
-			ref="splash"
-		>
-			<div class="profile" />
-			<div class="signature flex flex-col items-center">
-				<div class="svg-initials" />
-				<div class="feather" />
-			</div>
+	<section 
+		class="splash"
+		ref="splash"
+	>
+		<div class="profile" />
+		<div class="signature flex flex-col items-center">
+			<div class="svg-initials" />
+			<div class="feather" />
 		</div>
-	</div>
+	</section>
 </template>
 
 <script>
@@ -22,7 +20,7 @@ export default {
 <style lang="scss" scoped>
 @import './../../scss/layout/responsive.scss';
 
-.splash-screen {
+.splash {
 		width: 100vw;
 		height: 100vh;
 
