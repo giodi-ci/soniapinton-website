@@ -1,11 +1,13 @@
 <template>
     <div class="quote">
         <div class="quote__symbol">“</div>
-		<p 
-            class="quote__text"
-            v-html="quoteText"
-        />
-        <slot />
+        <div class="quote__content">
+            <p 
+                class="quote__content-text"
+                v-html="quoteText"
+            />
+            <slot />
+        </div>
     </div>
 </template>
 
@@ -26,11 +28,14 @@
 .quote {
     position: relative;
     max-width: 500px;
+    display: flex;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+    }
 
     &__symbol {
-        position: absolute;
-        top: 0;
-        left: -15%;
         color: $blue;
         @include font-size(9rem);
         line-height: 0;
