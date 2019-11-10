@@ -1,12 +1,15 @@
 <template>
 	<section class="about-me">
-		<title-simple :text="titleAboutMe" />
+		<title-simple :text="text.title" />
 		<div class="about-me__content">
 			<quote 
 				class="about-me__content-quote"
-				:quoteText="quoteAboutMe"
+				:quoteText="text.quote"
 			>
-				<button>CTA</button>
+				<button-primary 
+					:button-text="text.button" 
+					fill="true"
+				/>
 			</quote>
 			<div class="about-me__content-image" />
 		</div>
@@ -16,16 +19,21 @@
 <script>
 import TitleSimple from './../ui/TitleSimple.vue';
 import Quote from './../ui/Quote.vue';
+import ButtonPrimary from './../ui/ButtonPrimary.vue';
 
 export default {
 	components: {
 		TitleSimple,
 		Quote,
+		ButtonPrimary,
 	},
 	data() {
 		return {
-			titleAboutMe: 'Su di me',
-			quoteAboutMe: 'Earum hic voluptatum optio sint dolorem et. Impedit numquam vel corrupti. Totam nobis et iste accusamus explicabo modi ut velit.<br> Aut corrupti quo quae assumenda odio ut. Quia nostrum nostrum qui aut in minus sunt. Provident ratione quia accusamus saepe aut. Enim rem deserunt aliquam sed non.'
+			text: {
+				title: 'Su di me',
+				quote: 'Earum hic voluptatum optio sint dolorem et. Impedit numquam vel corrupti. Totam nobis et iste accusamus explicabo modi ut velit.<br> Aut corrupti quo quae assumenda odio ut. Quia nostrum nostrum qui aut in minus sunt. Provident ratione quia accusamus saepe aut. Enim rem deserunt aliquam sed non.',
+				button: 'CTA',
+			}
 		}
 	}
 }
