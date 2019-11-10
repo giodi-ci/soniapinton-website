@@ -1,12 +1,21 @@
 <template>
 	<section class="about-me">
-        <h1>About me</h1>
+        <title-simple :text="titleAboutMe" />
 	</section>
 </template>
 
 <script>
-export default {
+import TitleSimple from './../ui/TitleSimple.vue';
 
+export default {
+	components: {
+		TitleSimple,
+	},
+	data() {
+		return {
+			titleAboutMe: 'Su di me'
+		}
+	}
 }
 </script>
 

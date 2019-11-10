@@ -1,7 +1,7 @@
 <template>
 	<div class="index">
 		<!-- Nuxt - only client side rendering -->
-		<no-ssr placeholder="loading...">
+		<client-only placeholder="loading...">
 			<scroll-full-page>
 				<splash />
 				<about-me />
@@ -10,7 +10,7 @@
 					<footer-section />
 				</section>
 			</scroll-full-page>
-		</no-ssr>
+		</client-only>
 	</div>
 </template>
 
