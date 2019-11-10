@@ -1,0 +1,24 @@
+// Responsive Font Size
+@import "~rfs/scss";
+
+// Layout
+@import 'layout/variables';
+@import 'layout/responsive';
+
+// UI
+@import 'ui/fonts';
+@import 'ui/colors';
+@import 'ui/typography';
+
+// Utils
+@import 'utils/functions';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+}

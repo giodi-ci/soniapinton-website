@@ -1,0 +1,21 @@
+// Primary font
+@font-face {
+    font-family: 'Book';
+    font-weight: normal;
+    font-style: normal;
+    src: url('./../assets/fonts/HelveticaNeue-01.ttf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Medium';
+    font-weight: normal;
+    font-style: normal;
+    src: url('./../assets/fonts/HelveticaNeue-Medium-11.ttf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Bold';
+    font-weight: normal;
+    font-style: normal;
+    src: url('./../assets/fonts/HelveticaNeue-CondensedBold-05.ttf') format('opentype');
+}
