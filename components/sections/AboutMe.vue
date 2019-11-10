@@ -41,6 +41,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '../../scss/ui/_colors.scss';
+@import './../../scss/layout/responsive.scss';
 
 .about-me {
 	width: 100vw;
@@ -53,9 +54,13 @@ export default {
 		width: 100%;
 		height: 100%;
 
+		@media only screen and (max-width: $medium) {
+			flex-direction: column;
+		}
+
 		&-image {
-			width: 260px;
-			height: 260px;
+			min-width: 260px;
+			min-height: 260px;
 			border-radius: 50%;
 			border: 1px solid $blue;
 			background-image: url('../../assets/images/sonia-pinton-about-me.png');
