@@ -4,8 +4,8 @@
 		<div class="wrapper">
 			<about-me />
 			<latest-post />
-			<footer-section />
 		</div>
+		<footer-section />
 	</div>
 </template>
 
