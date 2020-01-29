@@ -46,16 +46,25 @@ export default {
 
 <style lang="scss" scoped>
 @import '../../scss/ui/_colors.scss';
+@import './../../scss/layout/responsive.scss';
 
 .footer {
 	background-color: $blue;
 	width: 100%;
-	height: 50px;
+	min-height: 50px;
 	display: flex;
     justify-content: space-between;
 	align-items: center;
 	color: $azure-white;
 	padding: 0 2em;
+	flex-wrap: wrap-reverse;
+
+	& > div {
+		@media only screen and (max-width: $medium) {
+			flex-basis: 100%;
+			margin: 1em 0;
+		}
+	}
 
 	&-socials {
 		display: flex;
