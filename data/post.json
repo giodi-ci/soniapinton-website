@@ -1,0 +1,40 @@
+{
+    "post": [
+        {
+            "lyric": "Lorem",
+            "image": "background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flex-1.jpg);"
+        },
+        {
+            "lyric": "Ipsum",
+            "image": "background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flex-1.jpg);"
+        },
+        {
+            "lyric": "Sonia",
+            "image": "background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flex-1.jpg);"
+        },
+        {
+            "lyric": "Lorem",
+            "image": "background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flex-1.jpg);"
+        },
+        {
+            "lyric": "Ipsum",
+            "image": "background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flex-1.jpg);"
+        },
+        {
+            "lyric": "Sonia",
+            "image": "background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flex-1.jpg);"
+        },
+        {
+            "lyric": "Lorem",
+            "image": "background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flex-1.jpg);"
+        },
+        {
+            "lyric": "Ipsum",
+            "image": "background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flex-1.jpg);"
+        }
+    ],
+    "central": {
+        "placeholder": "Found at more",
+        "image": "background-color: #1F4164;"
+    }
+}

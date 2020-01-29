@@ -3,16 +3,20 @@
 		<title-simple :text="text.title" />
 		<div class="latest-post__all-post">
 			<post
-				v-for="post in latestPost"
+				v-for="(post, index) in allPost"
 				:key="post.id"
 				:background="post.image"
-				:lyric="post.lyric"
+				:lyric="post.lyric ? post.lyric : ''"
+				:placeholder="post.placeholder ? post.placeholder : ''"
+				:class="`single-post__0${index}`"
 			/>
 		</div>
 	</div>
 </template>
 
 <script>
+import { post, central } from './../../data/post.json';
+
 import TitleSimple from './../ui/TitleSimple.vue';
 import Post from './../ui/Post.vue';
 
@@ -26,45 +30,19 @@ export default {
 			text: {
 				title: 'Latest from',
 			},
-			latestPost: [
-				{
-					lyric: 'Lorem',
-					image: 'background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flex-1.jpg);'
-				},
-				{
-					lyric: 'Ipsum',
-					image: 'background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flex-1.jpg);',
-				},
-				{
-					lyric: 'Sonia',
-					image: 'background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flex-1.jpg);',
-				},
-				{
-					lyric: 'Lorem',
-					image: 'background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flex-1.jpg);',
-				},
-				{
-					lyric: 'Ipsum',
-					image: 'background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flex-1.jpg);',
-				},
-				{
-					lyric: 'Sonia',
-					image: 'background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flex-1.jpg);',
-				},
-				{
-					lyric: 'Lorem',
-					image: 'background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flex-1.jpg);',
-				},
-				{
-					lyric: 'Ipsum',
-					image: 'background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flex-1.jpg);',
-				},
-				{
-					lyric: 'Sonia',
-					image: 'background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flex-1.jpg);',
-				}
-			],
 		};
+	},
+	computed: {
+		lyricPost() {
+			return post;
+		},
+		centralPost() {
+			return central;
+		},
+		allPost() {
+			this.lyricPost.splice(4, 0, this.centralPost);
+			return this.lyricPost;
+		},
 	},
 };
 

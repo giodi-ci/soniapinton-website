@@ -3,7 +3,7 @@
         class="post"
         :style="background"
     >
-
+        <h3 class="post-placeholder">{{ placeholder }}</h3>
     </div>
 </template>
 
@@ -18,6 +18,10 @@
                 type: String,
                 required: true,
             },
+            placeholder: {
+                type: String,
+                default: '',
+            },
         },
     }
 </script>
@@ -31,8 +35,12 @@
     border: 2px solid $blue;
     background-position: center center;
     background-size: cover;
-    flex-basis: 33%;
     margin: 3px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-basis: 33%;
 
     @media only screen and (max-width: $medium) {
         flex-basis: 50%;
@@ -40,6 +48,10 @@
 
     @media only screen and (max-width: $small) {
         flex-basis: 100%;
+    }
+
+    &-placeholder {
+        color: $azure-white;
     }
 }
 </style>
