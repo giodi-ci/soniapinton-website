@@ -1,9 +1,11 @@
 <template>
 	<div class="index">
 		<splash />
-		<about-me />
-		<latest-post />
-		<footer-section />
+		<div class="wrapper">
+			<about-me />
+			<latest-post />
+			<footer-section />
+		</div>
 	</div>
 </template>
 
@@ -20,14 +22,16 @@ import FooterSection from './../components/sections/FooterSection.vue';
 			LatestPost,
 			FooterSection,
 		},
-		data() {
-			return {
-				
-			}
-		},
 	}
 </script>
 
 <style lang="scss" scoped>
 
+.index {
+	.wrapper {
+		padding: 0 1em;
+	}
+}
+
 </style>
+
