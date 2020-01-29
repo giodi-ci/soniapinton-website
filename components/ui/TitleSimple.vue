@@ -11,7 +11,6 @@
 				required: true
 			}
 		}
-        
     }
 </script>
 
@@ -25,19 +24,19 @@
 	justify-content: center;
 	text-transform: uppercase;
 	position: relative;
-	
+
 	h2 {
 		color: $blue;
 		background-color: white;
 		padding: 0 1rem;
 	}
-	
+
 	&::before {
 		content: '';
 		position: absolute;
 		top: 50%;
 		z-index: -1;
-		width: 95%;
+		width: 100%;
 		height: 1px;
 		background-color: $gray;
 	}

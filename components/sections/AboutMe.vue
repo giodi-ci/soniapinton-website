@@ -2,12 +2,12 @@
 	<section class="about-me">
 		<title-simple :text="text.title" />
 		<div class="about-me__content">
-			<quote 
+			<quote
 				class="about-me__content-quote"
 				:quoteText="text.quote"
 			>
-				<button-primary 
-					:button-text="text.button" 
+				<button-primary
+					:button-text="text.button"
 					fill="true"
 				/>
 			</quote>
@@ -44,7 +44,7 @@ export default {
 @import './../../scss/layout/responsive.scss';
 
 .about-me {
-	width: 100vw;
+	width: 100%;
 	height: 100vh;
 
 	&__content {

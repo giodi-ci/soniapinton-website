@@ -2,7 +2,7 @@
 	<div class="latest-post">
 		<title-simple :text="text.title" />
 		<div class="latest-post__all-post">
-			<post 
+			<post
 				v-for="post in latestPost"
 				:key="post.id"
 				:background="post.image"
@@ -30,11 +30,11 @@ export default {
 				{
 					lyric: 'Lorem',
 					image: 'background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flex-1.jpg);'
-				}, 
+				},
 				{
 					lyric: 'Ipsum',
 					image: 'background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flex-1.jpg);',
-				}, 
+				},
 				{
 					lyric: 'Sonia',
 					image: 'background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flex-1.jpg);',
@@ -42,11 +42,11 @@ export default {
 				{
 					lyric: 'Lorem',
 					image: 'background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flex-1.jpg);',
-				}, 
+				},
 				{
 					lyric: 'Ipsum',
 					image: 'background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flex-1.jpg);',
-				}, 
+				},
 				{
 					lyric: 'Sonia',
 					image: 'background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flex-1.jpg);',
@@ -54,19 +54,20 @@ export default {
 				{
 					lyric: 'Lorem',
 					image: 'background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flex-1.jpg);',
-				}, 
+				},
 				{
 					lyric: 'Ipsum',
 					image: 'background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flex-1.jpg);',
-				}, 
+				},
 				{
 					lyric: 'Sonia',
 					image: 'background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flex-1.jpg);',
 				}
-			]
+			],
 		};
 	},
-}
+};
+
 </script>
 
 <style lang="scss" scoped>
@@ -75,6 +76,7 @@ export default {
 	&__all-post {
 		display: flex;
 		flex-wrap: wrap;
+		justify-content: space-between;
 	}
 }
 

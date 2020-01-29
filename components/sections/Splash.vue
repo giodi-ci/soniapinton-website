@@ -1,9 +1,7 @@
 <template>
 	<section class="splash">
 		<div class="splash__signature">
-			<signature 
-				class="splash__signature-initials" 
-			>
+			<signature class="splash__signature-initials">
 				<h1 class="text text--left">
 					AUTRICE DI
 				</h1>
@@ -34,7 +32,7 @@ export default {
 @import './../../scss/ui/colors.scss';
 
 .splash {
-	width: 100vw;
+	width: 100%;
 	height: 100vh;
 	position: relative;
 	display: flex;
