@@ -105,8 +105,8 @@ export default {
 		}
 
 		&-feather {
-			min-width: 200px;
-			width: 20%;
+			min-width: 350px;
+			width: 30%;
 		}
 	}
 }

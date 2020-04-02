@@ -3,7 +3,10 @@
         class="post"
         :style="background"
     >
-        <h3 class="post-placeholder">{{ placeholder }}</h3>
+        <h3
+            class="post-placeholder"
+            v-html="placeholder"
+        />
     </div>
 </template>
 
@@ -32,7 +35,6 @@
 
 .post {
 	height: 300px;
-    border: 2px solid $blue;
     background-position: center center;
     background-size: cover;
     margin: 3px 0;
@@ -40,11 +42,9 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    flex-basis: 33%;
-
-    @media only screen and (max-width: $medium) {
-        flex-basis: 50%;
-    }
+    padding: 0;
+    margin: 5px;
+    flex: 0 0 calc(33.3333% - 10px);
 
     @media only screen and (max-width: $small) {
         flex-basis: 100%;
@@ -52,6 +52,12 @@
 
     &-placeholder {
         color: $azure-white;
+    }
+
+    .single-post {
+        &__04 {
+            font-size: 2rem;
+        }
     }
 }
 </style>
