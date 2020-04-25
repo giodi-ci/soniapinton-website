@@ -27,22 +27,30 @@
 </template>
 
 <script>
-    export default {
-        data() {
-            return {
-                loginForm: {
-                    email: '',
-                    password: '',
-                },
-                error: '',
-            };
+import * as firebase from 'firebase/app';
+import 'firebase/auth';
+
+export default {
+    data() {
+        return {
+            loginForm: {
+                email: '',
+                password: '',
+            },
+            error: '',
+        };
+    },
+    methods: {
+        login() {
+            firebase.auth().signInWithEmailAndPassword(this.loginForm.email, this.loginForm.password)
+                .then(data => {
+                    this.$router.push('./dashboard')
+                }).catch(error => {
+                    this.error = error;
+                })
         },
-        methods: {
-            login() {
-                console.log('try to log in');  
-            }
-        }
-    }
+    },
+};
 </script>
 
 <style lang="scss" scoped>
