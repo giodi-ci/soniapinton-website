@@ -1,11 +1,6 @@
 <template>
     <div class="dashboard">
-        <div 
-            class="lougout"
-            @click="logout"
-        >
-            Lougout
-        </div>
+        DASHBOARD
     </div>
 </template>
 
@@ -22,22 +17,15 @@ export default {
             const user = getUserFromCookie(req);
             
             if (!user) {
-                redirect('/login');
+                redirect('/sp-admin');
             }
         } else {
             const user = firebase.auth().currentUser;
 
             if (!user) {
-                redirect('/login');
+                redirect('/sp-admin');
             }
         }
-    },
-    methods: {
-        logout() {
-            firebase.auth().signOut().then(() => {
-                this.$router.push('/')
-            });
-        },
     },
 };
 </script>
