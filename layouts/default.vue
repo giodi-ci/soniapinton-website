@@ -4,12 +4,25 @@
 			class="admin-navigation"
 			v-if="loggedIn"
 		>
-			<nuxt-link to="/">Landing Page</nuxt-link>
-			<nuxt-link to="/dashboard">Dashboard</nuxt-link>
+			<nuxt-link 
+				to="/"
+				:class="{ 'route-active': currentRoute === 'index' }"
+			>
+				<div class="icon icon-landing-page" />
+				Landing Page
+			</nuxt-link>
+			<nuxt-link 
+				to="/dashboard"
+				:class="{ 'route-active': currentRoute === 'dashboard' }"
+			>
+				<div class="icon icon-dashboard" />
+				Dashboard
+			</nuxt-link>
 			<a 
 				class="logout"
 				@click="logout"
 			>
+				<div class="icon icon-close" />
 				Logout
 			</a>
 		</nav>
@@ -27,6 +40,11 @@ export default {
 		return {
 			loggedIn: false,
 		};
+	},
+	computed: {
+		currentRoute() {
+			return this.$route.name;
+		}
 	},
 	mounted() {
 		this.setUpFirebase();
@@ -57,5 +75,55 @@ export default {
 
 <style lang="scss">
 @import './../scss/global.scss';
+
+.admin-navigation {
+	width: 100vw;
+	height: 30px;
+	background-color: $navigation-background;
+	color: $azure-white;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+
+	a {
+		display: flex;
+		margin: 0 .8rem;
+		transition: all .2s linear;
+
+		&:hover {
+			text-decoration: underline;
+			transform: scale(1.2);
+		}
+	}
+
+	.route-active {
+		text-decoration: underline;
+	}
+
+	.logout {
+		margin-left: auto;
+	}
+
+	.icon {
+		width: 20px;
+		height: 20px;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+		padding-right: 1.5rem;
+
+		&-landing-page {
+			background-image: url('../assets/icons/home.svg');
+		}
+
+		&-dashboard {
+			background-image: url('../assets/icons/dashboard.svg');
+		}
+
+		&-close {
+			background-image: url('../assets/icons/close.svg');
+		}
+	}
+}
 
 </style>
