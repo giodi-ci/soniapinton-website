@@ -6,6 +6,12 @@
 		>
 			<nuxt-link to="/">Landing Page</nuxt-link>
 			<nuxt-link to="/dashboard">Dashboard</nuxt-link>
+			<a 
+				class="logout"
+				@click="logout"
+			>
+				Logout
+			</a>
 		</nav>
 		<nuxt />
 	</div>
@@ -39,8 +45,13 @@ export default {
 					Cookies.remove('access_token');
                 }
             })
-        }
-	}
+		},
+		logout() {
+            firebase.auth().signOut().then(() => {
+                this.$router.push('/')
+            });
+        },
+	},
 }
 </script>
 
