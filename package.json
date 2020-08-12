@@ -18,7 +18,7 @@
     "nuxt": "^2.11.0",
     "rfs": "^9.0.2",
     "save-dev": "0.0.1-security",
-    "serialize-javascript": "^2.1.2"
+    "serialize-javascript": "^3.1.0"
   },
   "devDependencies": {
     "node-sass": "^4.13.1",
